@@ -1,0 +1,6 @@
+rootProject.name = 'jme3-examples'
+include ':adventure'
+include ':fighter'
+include ':racing'
+include ':shooter'
+include ':strategy'
