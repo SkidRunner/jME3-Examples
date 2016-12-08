@@ -1,0 +1,15 @@
+apply plugin: 'base'
+
+allprojects() {
+    group = 'me.skidrunner'
+    version = '1.0-SNAPSHOT'
+}
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+	}
+}
