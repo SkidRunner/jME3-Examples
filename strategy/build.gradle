@@ -1,1 +1,1 @@
-description = 'critters4j-core'
+apply plugin : 'java'
