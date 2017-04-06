@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-controls xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+
+    <controlDefinition style="nifty-progressbar" name="progressbar"
+                       controller="de.lessvoid.nifty.controls.progressbar.ProgressBarControl">
+        <panel style="#panel" focusable="false">
+            <panel childLayout="absolute" width="100%" height="100%" >
+                <panel id="#indicator" style="#indicator" width="$progress" />
+            </panel>
+            <text id="#text" style="#text" text="$label"/>
+        </panel>
+    </controlDefinition>
+
+</nifty-controls>
