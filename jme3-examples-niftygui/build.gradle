@@ -12,6 +12,7 @@ dependencies {
     
     // Project
     compile fileTree(dir: rootProject.file('libs'), include: ['*.jar'])
+    compile project(':jme3-examples-assets')
     
     // jMonkeyEngine
     compile 'org.jmonkeyengine:jme3-core:3.1.0-stable'

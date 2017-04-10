@@ -1,0 +1,24 @@
+group = 'io.skidrunner'
+version = '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+dependencies {
+    // Test
+    testCompile 'junit:junit:+'
+    
+    // Project
+    compile fileTree(dir: rootProject.file('libs'), include: ['*.jar'])
+    
+    // jMonkeyEngine
+    compile 'org.jmonkeyengine:jme3-core:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-effects:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-networking:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-plugins:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-jogg:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-terrain:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-blender:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-jbullet:3.1.0-stable'
+//  compile 'org.jmonkeyengine:jme3-bullet:3.1.0-stable'
+    compile 'org.jmonkeyengine:jme3-niftygui:3.1.0-stable'
+}
