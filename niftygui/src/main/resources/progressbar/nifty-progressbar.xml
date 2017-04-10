@@ -2,7 +2,7 @@
 <nifty-styles xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
 
     <!-- +++++++++++++++++++++++++++++++++++++ -->
-    <!-- style for the button background panel -->
+    <!-- style for the progress background panel -->
     <!-- +++++++++++++++++++++++++++++++++++++ -->
     <style id="nifty-progressbar#panel">
         <attributes backgroundImage="progressbar/progressbar.png"
