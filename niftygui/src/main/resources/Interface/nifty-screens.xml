@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- load styles -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <useStyles filename="nifty-default-styles.xml" />
+  <useControls filename="nifty-default-controls.xml" />
+  
+  <!--<useStyles filename="nifty-custom-styles.xml" />-->
+  <!--<useControls filename="nifty-custom-controls.xml" />-->
+  
+  <useStyles filename="progressbar/nifty-progressbar.xml" />
+  <useControls filename="nifty-controls/nifty-progressbar.xml" />
+  
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- loading screen -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <screen id="start" controller="io.skidrunner.nifty.MainApplication">
+    <layer childLayout="center"/>
+      <control id="progressBar" name="progressbar" />
+    </layer>
+  </screen>
+  
+</nifty>
