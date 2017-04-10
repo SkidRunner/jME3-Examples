@@ -1,18 +1,13 @@
 apply plugin: 'base'
 
-allprojects() {
-    group = 'me.skidrunner'
-    version = '1.0-SNAPSHOT'
-}
-
 buildscript {
-	repositories {
-		jcenter()
-	}
-	dependencies {
-	}
+    repositories {
+        jcenter()
+    }
 }
 
 subprojects {
-	apply from: rootProject.file('common.gradle')
+    repositories {
+        jcenter()
+    }
 }

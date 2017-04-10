@@ -1,0 +1,19 @@
+<html>
+<head>
+<title></title>
+</head>
+<body style="background-color: #ccc">
+Hi there,
+<p/>
+seems like you're looking for the Nifty GUI XML-schema (XSD) file. Well, the good news is, you've come to the <strong>kinda</strong> right place ;)
+<p/>
+Starting with Nifty 1.4 the correct XSD will always be included in your nifty.jar. To access it, you can simply unjar it (jar -xf nifty.jar) and find it in the file "nifty.xsd". The reason for this and why the XSD is not directly available for download is to allow us to make changes to the XSD more easily.
+<p/>
+The latest version of the XSD is always availabe at github of course. So if you just want to take a look you can do so here: <a href="https://github.com/void256/nifty-gui/blob/1.4/nifty-core/src/main/resources/nifty.xsd">Nifty 1.4 XSD at github</a> or if you just want to download the latest version use the <a href="https://raw.github.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd">direct link</a>.
+<p/>
+But make sure that the XSD matches the Nifty version you use. It's probably a good idea to just use the "nifty.xsd" that ships with your Nifty version to be sure. You know, the one you can find in the "nifty.jar".
+<p/>
+Best regards,
+void
+</body>
+</html>

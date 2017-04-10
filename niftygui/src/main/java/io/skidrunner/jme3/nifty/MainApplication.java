@@ -1,4 +1,4 @@
-package io.skidrunner.nifty;
+package io.skidrunner.jme3.nifty;
 
 import com.jme3.app.SimpleApplication;
 import com.jme3.niftygui.NiftyJmeDisplay;
@@ -58,7 +58,7 @@ public class MainApplication extends SimpleApplication implements ScreenControll
 
     @Override
     public void onStartScreen() {
-        progress = 0f;
+        progress = 1;
     }
 
     @Override

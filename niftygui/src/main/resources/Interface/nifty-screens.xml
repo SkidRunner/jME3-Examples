@@ -13,11 +13,11 @@
   <useControls filename="nifty-controls/nifty-progressbar.xml" />
   
   <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <!-- loading screen -->
+  <!-- progressbar screen -->
   <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <screen id="start" controller="io.skidrunner.nifty.MainApplication">
-    <layer childLayout="center"/>
-      <control id="progressBar" name="progressbar" />
+  <screen id="start" controller="io.skidrunner.jme3.nifty.MainApplication">
+    <layer childLayout="center">
+      <control id="progressbar" name="progressbar" width="75%" />
     </layer>
   </screen>
   
