@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-styles xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+    
+    <style id="metal-panel">
+        <attributes padding="16px" backgroundImage="panel/metal-panel.png"
+                    imageMode="resize:15,70,15,15,15,70,15,70,15,70,15,15"/>
+    </style>
+    
+    <style id="metal-panel-plate">
+        <attributes padding="8px" backgroundImage="panel/metal-panel-plate.png"
+                    imageMode="resize:8,64,8,8,8,64,8,64,8,64,8,8"/>
+    </style>
+    
+    <style id="glass-panel">
+        <attributes padding="16px" backgroundImage="panel/glass-panel.png"
+                    imageMode="resize:15,70,15,15,15,70,15,70,15,70,15,15"/>
+    </style>
+    
+    <style id="glass-panel-top-left">
+        <attributes padding="16px" backgroundImage="panel/glass-panel-top-left.png"
+                    imageMode="resize:15,70,15,15,15,70,15,70,15,70,15,15"/>
+    </style>
+    
+    <style id="glass-panel-top-right">
+        <attributes padding="16px" backgroundImage="panel/glass-panel-top-right.png"
+                    imageMode="resize:15,70,15,15,15,70,15,70,15,70,15,15"/>
+    </style>
+    
+    <style id="glass-panel-bottom-left">
+        <attributes padding="16px" backgroundImage="panel/glass-panel-bottom-left.png"
+                    imageMode="resize:15,70,15,15,15,70,15,70,15,70,15,15"/>
+    </style>
+    
+    <style id="glass-panel-bottom-right">
+        <attributes padding="16px" backgroundImage="panel/glass-panel-bottom-right.png"
+                    imageMode="resize:15,70,15,15,15,70,15,70,15,70,15,15"/>
+    </style>
+    
+</nifty-styles>

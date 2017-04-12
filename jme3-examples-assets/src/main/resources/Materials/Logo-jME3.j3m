@@ -1,0 +1,9 @@
+Material jME3 Logo : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : Flip Textures/Logo-jME3.png
+     }
+    AdditionalRenderState {
+        AlphaTestFalloff 1.0
+        Blend Alpha
+    }
+}

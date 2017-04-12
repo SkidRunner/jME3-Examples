@@ -5,8 +5,8 @@
     <!-- style for the progress background panel -->
     <!-- +++++++++++++++++++++++++++++++++++++ -->
     <style id="nifty-progressbar#panel">
-        <attributes backgroundImage="progressbar/progressbar.png"
-                    imageMode="sprite-resize:100,23,0,2,96,2,2,2,96,2,19,2,96,2,2"
+        <attributes backgroundImage="button/button.png"
+                    imageMode="sprite-resize:100,23,2,2,96,2,2,2,96,2,19,2,96,2,2"
                     width="100px" height="23px"  childLayout="center"/>
 
         <effect>
@@ -19,7 +19,7 @@
     <!-- style for the progress indicator -->
     <!-- +++++++++++++++++++++++++++++++++++++ -->
     <style id="nifty-progressbar#indicator">
-        <attributes x="0" y="0" backgroundImage="progressbar/progressbar.png" width="23px" height="100%"
+        <attributes x="0" y="0" backgroundImage="button/button.png" width="23px" height="100%"
                     imageMode="sprite-resize:100,23,1,2,96,2,2,2,96,2,19,2,96,2,2" />
         <effect>
             <onEnabled name="renderQuad" startColor="#2228" endColor="#2220" post="true" length="150"/>

@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
-  <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <!-- load styles -->
-  <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <useStyles filename="nifty-default-styles.xml" />
-  <useControls filename="nifty-default-controls.xml" />
-  
-  <!--<useStyles filename="nifty-custom-styles.xml" />-->
-  <!--<useControls filename="nifty-custom-controls.xml" />-->
-  
-  <useStyles filename="progressbar/nifty-progressbar.xml" />
-  <useControls filename="nifty-controls/nifty-progressbar.xml" />
-  
-  <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <!-- progressbar screen -->
-  <!-- +++++++++++++++++++++++++++++++++++++++ -->
-  <screen id="start" controller="io.skidrunner.jme3.nifty.MainApplication">
-    <layer childLayout="center">
-      <control id="progressbar" name="progressbar" width="75%" />
-    </layer>
-  </screen>
-  
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- load styles -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <useStyles filename="nifty-custom-styles.xml" />
+    <useControls filename="nifty-custom-controls.xml" />
+
+    <useStyles filename="progressbar/nifty-progressbar.xml" />
+    <useControls filename="nifty-controls/nifty-progressbar.xml" />
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- splash screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="jmonkey-splash" controller="io.skidrunner.jme3.nifty.JmonkeySplashScreen" inputMapping="de.lessvoid.nifty.input.mapping.DefaultScreenMapping">
+        <layer childLayout="center" width="100%" height="100%" backgroundColor="#000f">
+            <effect>
+                <onEndScreen name="fade" startColor="#ffff" endColor="#0000" length="500" startDelay="1500" inherit="true" alternateDisable="exit" />
+                <onEndScreen name="fade" startColor="#ffff" endColor="#0000" length="500" startDelay="0" post="false" inherit="true" alternateEnable="exit" />
+            </effect>
+            <image id="logo" filename="Textures/Logo-jME3.png" align="center" valign="center" />
+        </layer>
+    </screen>
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- splash screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="nifty-splash" controller="io.skidrunner.jme3.nifty.NiftySplashScreen" inputMapping="de.lessvoid.nifty.input.mapping.DefaultScreenMapping">
+        <layer childLayout="center" backgroundColor="#000f">
+            <effect>
+                <onStartScreen name="fade" startColor="#0000" endColor="#ffff" length="500" startDelay="0" inherit="true" alternateDisable="exit" />
+
+                <onEndScreen name="fade" startColor="#ffff" endColor="#0000" length="500" startDelay="1500" inherit="true" alternateDisable="exit" />
+                <onEndScreen name="fade" startColor="#ffff" endColor="#0000" length="500" startDelay="0" post="false" inherit="true" alternateEnable="exit" />
+            </effect>
+            <image id="logo" filename="Textures/Logo-NiftyGUI.png" align="center" valign="center" />
+        </layer>
+    </screen>
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- loading screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="loading" controller="io.skidrunner.jme3.nifty.LoadingScreen">
+        <layer childLayout="center">
+            <panel childLayout="center" widht="100%" height="100%"  backgroundColor="#000f">
+                <effect>
+                    <onEndScreen name="fade" startColor="#000f" endColor="#0000" length="500" startDelay="0" post="false" inherit="true" />
+                </effect>
+                <control id="progressbar" name="progressbar" width="75%" text="0 / 100" />
+            </panel>
+            <image filename="Textures/Banner-jME3.png" align="right" valign="bottom" />
+        </layer>
+    </screen>
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- main menu screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="main" controller="io.skidrunner.jme3.nifty.MainScreen" inputMapping="de.lessvoid.nifty.input.mapping.DefaultScreenMapping">
+        <layer childLayout="center">
+            <panel style="metal-panel" childLayout="vertical" width="50%">
+                <effect>
+                    <onStartScreen name="move" mode="in" direction="bottom" length="500" startDelay="0" post="false" inherit="true" />
+                </effect>
+                <text style="nifty-label" text="jME3 NiftyGUI Example" />
+                <panel height="8px" />
+                <panel style="metal-panel-plate" childLayout="vertical" >
+                    <panel height="8px" />
+                    <control id="start" name="button" label="Start" align="center" />
+                    <panel height="8px" />
+                    <control id="options" name="button" label="Options" align="center" />
+                    <panel height="8px" />
+                    <control id="quit" name="button" label="Quit" align="center" />
+                    <panel height="8px" />
+                </panel>
+            </panel>
+            <image filename="Textures/Banner-jME3.png" align="right" valign="bottom" />
+        </layer>
+    </screen>
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- game ui screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="game" controller="io.skidrunner.jme3.nifty.GameScreen">
+        <layer childLayout="vertical" padding="16px">
+            <control id="healthbar" name="progressbar" text="Health" progress="100%"/>
+            <panel height="8px" />
+            <control id="energybar" name="progressbar" text="Energy" progress="50%" />
+        </layer>
+        <layer childLayout="center">
+            <image filename="Textures/Banner-jME3.png" align="right" valign="bottom" />
+        </layer>
+    </screen>
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- exit popup -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <popup id="popupExit" childLayout="center" backgroundColor="#000a">
+        <effect>
+            <onStartScreen name="fade" startColor="#0000" endColor="#000a" length="250" />
+            <onStartScreen name="playSound" sound="popup" startDelay="250" />
+            <onEndScreen name="fade" startColor="#000a" endColor="#0000" length="250" startDelay="250" />
+        </effect>
+        <panel style="glass-panel" childLayout="center" padding="18px,28px,40px,16px" width="30%" height="20%" align="center" valign="center">
+            <effect>
+                <onStartScreen name="fade" start="#0" end="#f" length="150" startDelay="250"/>
+                <onStartScreen name="imageSize" timeType="exp" factor="3.5" startSize="1.5" endSize="1.0" inherit="true" length="150" startDelay="250"/>
+                <onEndScreen name="fade" start="#f" end="#0" length="150" startDelay="0"/>
+                <onEndScreen name="imageSize" timeType="exp" factor="3.5" startSize="1.0" endSize="1.5" inherit="true" length="150" startDelay="0"/>
+            </effect>
+            <panel childLayout="vertical" align="center" valign="center">
+                <effect>
+                    <onStartScreen name="alphaHide" length="500" inherit="true" />
+                    <onEndScreen name="fade" length="10" start="#f" end="#0" inherit="true" />
+                </effect>
+                <panel childLayout="center" height="70%" width="100%">
+                    <text text="Really want to Exit?" style="base-font" align="center" valign="center" color="#000f"/>
+                </panel>
+                <panel childLayout="horizontal" align="center" height="30%">
+                    <panel childLayout="center" width="50%">
+                        <control id="yesButton" name="button" label="Yes" width="100px" align="center">
+                            <interact onClick="closePopupExit(yes)" />
+                        </control>
+                    </panel>
+                    <panel childLayout="center" width="50%">
+                        <control id="noButton" name="button" label="No" width="100px" align="center">
+                            <interact onClick="closePopupExit(no)" />
+                        </control>
+                    </panel>
+                </panel>
+            </panel>
+        </panel>
+    </popup>
+
 </nifty>

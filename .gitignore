@@ -12,8 +12,8 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
-/.nb-gradle/
-/private/
+**/.nb-gradle/
+**/private/
 
 # Compiled class file
 *.class
