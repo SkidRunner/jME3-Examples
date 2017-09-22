@@ -1,0 +1,45 @@
+MaterialDef Deferred {
+    MaterialParameters {
+    }
+    Technique {
+        VertexShader GLSL100:   MatDefs/Template.vert
+        FragmentShader GLSL100: MatDefs/Template.frag
+
+        WorldParameters {
+            //WorldMatrix                       // resolves to g_WorldMatrix in vertex shader.
+            //WorldMatrixInverse                // resolves to g_WorldMatrixInverse in vertex shader.
+            //ViewMatrix                        // resolves to g_ViewMatrix in vertex shader.
+            //ViewMatrixInverse                 // resolves to g_ViewMatrixInverse in vertex shader.
+            //ProjectionMatrix                  // resolves to g_ProjectionMatrix in vertex shader.
+            //ProjectionMatrixInverse           // resolves to g_ProjectionMatrixInverse in vertex shader.
+            //WorldViewMatrix                   // resolves to g_WorldViewMatrix in vertex shader.
+            //WorldViewMatrixInverse            // resolves to g_WorldViewMatrixInverse in vertex shader.
+            //NormalMatrix                      // resolves to g_NormalMatrix in vertex shader.
+            //NormalMatrixInverse               // resolves to g_NormalMatrixInverse in vertex shader.
+            WorldViewProjectionMatrix           // resolves to g_WorldViewProjectionMatrix in vertex shader.
+            //WorldViewProjectionMatrixInverse  // resolves to g_WorldViewProjectionMatrixInverse in vertex shader.
+            //ViewProjectionMatrix              // resolves to g_ViewProjectionMatrix in vertex shader.
+            //ViewProjectionMatrixInverse       // resolves to g_ViewProjectionMatrixInverse in vertex shader.
+
+            WorldMatrixInverseTranspose         // resolves to g_inWorldViewProjectionMatrixInverse in vertex shader.
+
+
+            //ViewPort                          // resolves to g_ViewPort in vertex shader.
+            //FrustumNearFar                    // resolves to g_FrustumNearFar in vertex shader.
+            //Resolution                        // resolves to g_Resolution in vertex shader.
+            //ResolutionInverse                 // resolves to g_ResolutionInverse in vertex shader.
+            //Aspect                            // resolves to g_Aspect in vertex shader.
+            //CameraPosition                    // resolves to g_CameraPosition in vertex shader.
+            //CameraDirection                   // resolves to g_CameraDirection in vertex shader.
+            //CameraLeft                        // resolves to g_CameraLeft in vertex shader.
+            //CameraUp                          // resolves to g_CameraUp in vertex shader.
+            //Time                              // resolves to g_Time in vertex shader.
+            //Tpf                               // resolves to g_Tpf in vertex shader.
+            //FrameRate                         // resolves to g_FrameRate in vertex shader.
+            //LightDirection                    // resolves to g_LightDirection in vertex shader.
+            //LightPosition                     // resolves to g_LightPosition in vertex shader.
+            //AmbientLightColor                 // resolves to g_AmbientLightColor in vertex shader.
+            //LightColor                        // resolves to g_LightColor in vertex shader.
+        }
+    }
+}
