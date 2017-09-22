@@ -1,0 +1,50 @@
+// Bidirectional Reflectance Distribution Function
+// Fresnel "Schlick"
+
+// 𝑓(l, v) = (𝐷(h) *  𝐹(l, h) * 𝐺(l, v, h)) / (4 * (n * l) * (n * v))
+
+// D(h) = Specular distribution Trowbridge-Reitz (GGX)
+// F(l, h) = Fresnel Schlick
+// G(l, v, h) = Geometric shadowing Schlick
+
+MaterialDef Physical {
+    MaterialParameters {
+        Color BaseColor
+        Texture2D BaseColorMap
+        Float Metallic
+        Texture2D MetallicMap
+        Float Specular
+        Texture2D SpecularMap
+        Float Roughness
+        Texture2D RoughnessMap
+        Color EmissiveColor
+        Texture2D EmissiveMap
+        Float Opacity
+        Texture2D OpacityMap
+        Texture2D NormalMap
+        Texture2D WorldDisplacementMap
+        Float TessellationMultiplier
+        Color SubsurfaceColor
+        Texture2D SubsurfaceColorMap
+        Texture2D AmbientOcclusionMap
+        Float Refraction
+    }
+    Technique {
+        WorldParameters {
+        }
+        VertexShaderNodes {
+            Definition : <DefinitionName> [: <DefinitionPath>]
+            InputMappings {
+            }
+            OutputMappings {
+            }
+        }
+        FragmentShaderNodes {
+            Definition : <DefinitionName> [: <DefinitionPath>]
+            InputMappings {
+            }
+            OutputMappings {
+            }
+        }
+    }
+}
