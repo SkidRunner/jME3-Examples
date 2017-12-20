@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty-styles xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+
+    <style base="button-font">
+        <attributes font="Nifty/Material/Font/RobotoMedium14.fnt" color="#000000DD" />
+    </style>
+
+    <style base="caption-font">
+        <attributes font="Nifty/Material/Font/Roboto12.fnt" color="#0000008A" />
+    </style>
+
+    <style base="body1-font">
+        <attributes font="Nifty/Material/Font/Roboto14.fnt" color="#000000DD" />
+    </style>
+
+    <style base="body2-font">
+        <attributes font="Nifty/Material/Font/RobotoMedium14.fnt" color="#000000DD" />
+    </style>
+
+    <style base="subheading-font">
+        <attributes font="Nifty/Material/Font/Roboto16.fnt" color="#000000DD" />
+    </style>
+
+    <style base="title-font">
+        <attributes font="Nifty/Material/Font/RobotoMedium21.fnt" color="#000000DD" />
+    </style>
+
+    <style base="headline-font">
+        <attributes font="Nifty/Material/Font/RobotoMedium24.fnt" color="#000000DD" />
+    </style>
+
+    <style base="display1-font">
+        <attributes font="Nifty/Material/Font/Roboto34.fnt" color="#0000008A" />
+    </style>
+
+    <style base="display2-font">
+        <attributes font="Nifty/Material/Font/Roboto45.fnt" color="#0000008A" />
+    </style>
+
+    <style base="display3-font">
+        <attributes font="Nifty/Material/Font/Roboto56.fnt" color="#0000008A" />
+    </style>
+
+    <style base="display4-font">
+        <attributes font="Nifty/Material/Font/RobotoLight112.fnt" color="#0000008A" />
+    </style>
+
+</nifty-styles>

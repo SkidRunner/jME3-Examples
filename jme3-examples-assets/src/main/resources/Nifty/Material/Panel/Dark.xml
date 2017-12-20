@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<nifty-styles xmlns="http://nifty-gui.lessvoid.com/nifty-gui">
+    <style id="dialog-panel">
+        <attributes backgroundImage="Nifty/Material/Panel/DialogDark.png"
+                    imageMode="resize:48px,256px,48px,39px,48px,256px,48px,256px,48px,256px,48px,64px"
+                    padding="37px,62px,46px,46px"
+                    margin="-39px,-64px,-48px,-48px"/>
+    </style>
+</nifty-styles>
