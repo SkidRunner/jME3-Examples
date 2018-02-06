@@ -1,0 +1,33 @@
+MaterialDef SkyDome {
+    MaterialParameters {
+        Texture2D ColorMap
+        Texture2D GradientMap
+        Texture2D ShapeMap
+        Texture2D NoiseMap
+        Texture2D DetailMap
+
+        Float Cover : 0.57
+        Float Density : 0.84
+        Float Cover : 0.57
+        Float Density : 0.84
+        Float Height : 0.52
+        Float Sunset : 0.43
+        Float Speed : 0.1
+    }
+
+    Technique {
+        VertexShader GLSL100:   MatDefs/Sky/Sky.vert
+        FragmentShader GLSL100: MatDefs/Sky/Clouds.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            ViewMatrix
+            ProjectionMatrix
+            WorldMatrix
+            Time
+        }
+
+        Defines {
+        }
+    }
+}
