@@ -1,0 +1,23 @@
+MaterialDef SkyDome {
+    MaterialParameters {
+        Texture2D ColorMap
+        Texture2D GradientMap
+        Texture2D StarMap
+    }
+
+    Technique {
+        VertexShader GLSL100:   MatDefs/Sky/SkyDome.vert
+        FragmentShader GLSL100: MatDefs/Sky/SkyDome.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            ViewMatrix
+            ProjectionMatrix
+            WorldMatrix
+            Time
+        }
+
+        Defines {
+        }
+    }
+}
